@@ -2,7 +2,7 @@ package com.cosium.code.format.formatter;
 
 import static com.google.googlejavaformat.java.JavaFormatterOptions.Style.AOSP;
 import static com.google.googlejavaformat.java.JavaFormatterOptions.Style.GOOGLE;
-
+import org.mockito.Mockito;
 import com.google.googlejavaformat.java.JavaFormatterOptions;
 
 /** @author Réda Housni Alaoui */
@@ -12,12 +12,14 @@ public class GoogleJavaFormatterOptions {
   private final boolean fixImportsOnly;
   private final boolean skipSortingImports;
   private final boolean skipRemovingUnusedImports;
+  private int maxLineLength;
 
   public GoogleJavaFormatterOptions(
       boolean aosp,
       boolean fixImportsOnly,
       boolean skipSortingImports,
-      boolean skipRemovingUnusedImports) {
+      boolean skipRemovingUnusedImports,
+      int maxLineLength) {
     if (aosp) {
       style = AOSP;
     } else {
@@ -26,10 +28,13 @@ public class GoogleJavaFormatterOptions {
     this.fixImportsOnly = fixImportsOnly;
     this.skipSortingImports = skipSortingImports;
     this.skipRemovingUnusedImports = skipRemovingUnusedImports;
+    this.maxLineLength = maxLineLength;
   }
 
   public JavaFormatterOptions javaFormatterOptions() {
-    return JavaFormatterOptions.builder().style(style).build();
+    JavaFormatterOptions options =  Mockito.spy(JavaFormatterOptions.builder().style(style).build());
+    Mockito.doReturn(maxLineLength).when(options).maxLineLength();
+    return options;
   }
 
   public boolean isFixImportsOnly() {

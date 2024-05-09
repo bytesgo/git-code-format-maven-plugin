@@ -1,7 +1,7 @@
 package com.cosium.code.format;
 
-import com.cosium.code.format.formatter.GoogleJavaFormatterOptions;
 import org.apache.maven.plugins.annotations.Parameter;
+import com.cosium.code.format.formatter.GoogleJavaFormatterOptions;
 
 /** @author Réda Housni Alaoui */
 public class MavenGoogleJavaFormatOptions {
@@ -10,10 +10,11 @@ public class MavenGoogleJavaFormatOptions {
   @Parameter private boolean fixImportsOnly;
   @Parameter private boolean skipSortingImports;
   @Parameter private boolean skipRemovingUnusedImports;
+  @Parameter private int maxLineLength = 100;
 
   public GoogleJavaFormatterOptions toFormatterOptions() {
     return new GoogleJavaFormatterOptions(
-        aosp, fixImportsOnly, skipSortingImports, skipRemovingUnusedImports);
+        aosp, fixImportsOnly, skipSortingImports, skipRemovingUnusedImports, maxLineLength);
   }
 
   public void setAosp(boolean aosp) {
@@ -30,5 +31,9 @@ public class MavenGoogleJavaFormatOptions {
 
   public void setSkipRemovingUnusedImports(boolean skipRemovingUnusedImports) {
     this.skipRemovingUnusedImports = skipRemovingUnusedImports;
+  }
+  
+  public void setMaxLineLength(int maxLineLength) {
+    this.maxLineLength = maxLineLength;
   }
 }
