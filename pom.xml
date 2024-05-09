@@ -11,7 +11,7 @@
   <description>A maven plugin that automatically deploys https://github.com/google/google-java-format code formatter
     as a pre-commit git hook
   </description>
-  <url>https://github.com/cosium/maven-git-code-format</url>
+  <url>https://github.com/bytesgo/maven-git-code-format</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -280,9 +280,9 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:https://github.com/Cosium/maven-git-code-format</connection>
-    <developerConnection>scm:git:https://github.com/Cosium/maven-git-code-format</developerConnection>
-    <url>https://github.com/Cosium/maven-git-code-format</url>
+    <connection>scm:git:https://github.com/bytesgo/maven-git-code-format</connection>
+    <developerConnection>scm:git:https://github.com/bytesgo/maven-git-code-format</developerConnection>
+    <url>https://github.com/bytesgo/maven-git-code-format</url>
     <tag>HEAD</tag>
   </scm>
 
