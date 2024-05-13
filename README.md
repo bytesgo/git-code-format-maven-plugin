@@ -10,11 +10,11 @@ On commit, the hook will automatically format staged java files.
 
 * [#37](https://github.com/Cosium/git-code-format-maven-plugin/issues/37) To prevent conflicts with other plugins all keys are now 
 prefixed with `gcf`. e.g. `-DglobPattern=**/*` becomes `-Dgcf.globPattern=**/*`
-* [#38](https://github.com/Cosium/git-code-format-maven-plugin/issues/38) To avoid infringement to Apache Maven Trademark, 
+* [#38](https://github.com/bytesgo/git-code-format-maven-plugin/issues/38) To avoid infringement to Apache Maven Trademark, 
 the plugin was renamed to `git-code-format-maven-plugin`. Its new coordinates are 
-`com.cosium.code:git-code-format-maven-plugin`.
+`com.github.leeyazhou:git-code-format-maven-plugin`.
 
-`1.x` documentation can be found [here](https://github.com/Cosium/git-code-format-maven-plugin/blob/1.39/README.md)
+`1.x` documentation can be found [here](https://github.com/leeyazhou/git-code-format-maven-plugin/blob/1.39/README.md)
 
 ### Automatic code format and validation activation
 
@@ -24,7 +24,7 @@ Add this to your maven project **root** pom.xml :
 <build>
   <plugins>
     <plugin>
-      <groupId>com.cosium.code</groupId>
+      <groupId>com.github.leeyazhou</groupId>
       <artifactId>git-code-format-maven-plugin</artifactId>
       <version>${git-code-format-maven-plugin.version}</version>
       <executions>
@@ -69,7 +69,7 @@ The plugin allows you to tweak Google Java Format options :
 <build>
   <plugins>
     <plugin>
-      <groupId>com.cosium.code</groupId>
+      <groupId>com.github.leeyazhou</groupId>
       <artifactId>git-code-format-maven-plugin</artifactId>
       <version>${git-code-format-maven-plugin.version}</version>
       <executions>

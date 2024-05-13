@@ -11,7 +11,7 @@
   <description>A maven plugin that automatically deploys https://github.com/google/google-java-format code formatter
     as a pre-commit git hook
   </description>
-  <url>https://github.com/bytesgo/maven-git-code-format</url>
+  <url>https://github.com/bytesgo/git-code-format-maven-plugin</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
